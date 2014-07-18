@@ -1,0 +1,78 @@
+=========================Google================================
+1. Create new project google
+
+
+`````
+rails new google
+
+`````
+2. Add the code into github
+
+````
+git init
+git add .
+git commit -m "initial commit"
+
+git push -u origin master
+
+````
+3. Add the gem files
+
+````
+source 'https://rubygems.org'
+ruby '2.1.2'
+gem 'rails', '4.1.4'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'spring',        group: :development
+# gem 'bcrypt', '~> 3.1.7'
+gem 'simple_form'
+gem "therubyracer"
+gem 'country_select'
+gem 'quiet_assets'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'less-rails'
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+end
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+````
+4. Install gems
+
+5. Generate controller 
+
+````
+rails g controller welcome index
+about us.html.erb
+index.html.erb
+
+```
+6. Generate controller
+
+````
+rails g controller contacts
+
+````
+7. Generate model
+
+````
+rails g model contact name email address comments
+create
+new
+
+````

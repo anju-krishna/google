@@ -1,0 +1,37 @@
+<div class="row-fluid">
+  <div class="span4 well">
+ 
+      <h1>Description</h1>
+      <p>
+        Google is an American multinational corporation specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, and software. Most of its profits are derived from AdWords.Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University. Together they own about 14 percent of its shares but control 56 of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. 
+
+      </p>
+      <div class="span4 well ">
+      
+      </div>
+  </div>
+  
+  <div class="span4 well ">
+    <h1>Resume</h1>
+      <%= simple_form_for(@carrier) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :city %>
+          <%= f.input :country %>
+          <%= f.input :email_address %>
+          <%= f.input :phone_number %>
+          <%= f.input :resume %>
+          <%= f.input :photo %> 
+    
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit %>
+
+        </div>
+      <% end %>
+  </div>
+ 
+</div>
+
