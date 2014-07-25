@@ -9,7 +9,6 @@ class CreateCarriers < ActiveRecord::Migration
       t.integer :phone_number
       t.string :resume
       t.string :photo
-
       t.timestamps
     end
   end

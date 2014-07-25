@@ -37,9 +37,13 @@
           = link_to "Google",root_path,:class=>"brand"
           .container-fluid.nav-collapse
             %ul.nav
-              %li= link_to "Contact us", new_contact_path
-              %li= link_to "Carrier", new_carrier_path
-              %li= link_to "About us", welcome_about_path
+              - if user_signed_in?
+                %li= link_to "Sign out", destroy_user_session_path
+              - else
+                %li= link_to "About us", welcome_about_path
+                %li= link_to "Career", new_carrier_path
+                %li= link_to "Contact us", new_contact_path               
+                %li= link_to "Sign in" , new_user_session_path
           / /.nav-collapse
     .container-fluid
       .row-fluid
