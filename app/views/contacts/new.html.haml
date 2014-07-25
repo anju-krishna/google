@@ -1,0 +1,9 @@
+%h1 Contact Us
+= simple_form_for(@contact) do |f|
+  .form-inputs
+    = f.input :name
+    = f.input :email
+    = f.input :address
+    = f.input :comments
+  .form-actions
+    = f.button :submit

@@ -12,15 +12,13 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem "therubyracer"
-
-
 gem 'country_select'
 gem 'quiet_assets'
-
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'less-rails'
 gem 'carrierwave'
-
+gem 'haml-rails'
+gem 'erb2haml'
 gem 'devise'
 
 
