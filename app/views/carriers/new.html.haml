@@ -10,7 +10,7 @@
       %br Mobile No. :
       %br Current Location :
       %br Total Experience :
-  .span4.well
+  .span5.well
     %h1 Resume
     = simple_form_for(@carrier) do |f|
       .form-inputs
@@ -22,5 +22,5 @@
         = f.input :phone_number
         = f.input :resume
         = f.input :photo
-      .form-actions
-        = f.button :submit
+        = f.submit:"Upload Resume",class:"btn btn-success"
+      

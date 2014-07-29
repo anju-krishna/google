@@ -1,9 +1,27 @@
-%h1 Contact Us
-= simple_form_for(@contact) do |f|
-  .form-inputs
-    = f.input :name
-    = f.input :email
-    = f.input :address
-    = f.input :comments
-  .form-actions
-    = f.button :submit
+.row-fluid
+  .span4.well
+    %h1 Contact Us
+    = simple_form_for(@contact) do |f|
+      .form-inputs
+        = f.input :name
+        = f.input :email
+        = f.input :address
+        = f.input :comments
+        = f.submit:"Create Contact",class:"btn btn-success"
+  .span4.well
+    %h1 Address
+    %b United States
+    %br 
+    268 Bennett Avenue,
+    Staten Island,
+    NewYork, United States
+    Phone:+19298884134
+    %br
+    %b India 
+    %br
+    Drishya building, KINFRA Filim & Video Park,
+    Special Economic Zone, Sainik School P.O,
+    Kazakuttam, Trivandrum-695585
+    email:info@ideologysoft.com
+    Phone: 0471 2167522 / 0471 2415022 
+
