@@ -1,0 +1,27 @@
+%h1 Showing Portfolio
+%p
+  Name:
+  
+  = @portfolio.name
+%p
+  Description:
+  
+  = @portfolio.description
+%p
+  Image:
+  
+  = @portfolio.image
+  %br
+  = link_to "Back",portfolios_path |
+  = link_to 'Destroy', @portfolio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+
+
+
+
+
+
+
+
+
+

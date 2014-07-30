@@ -1,22 +1,25 @@
 
 .row-fluid
-  .span.well
+  .span12.well
     %h1 Welcome To Google
 #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
   / Indicators
   %ol.carousel-indicators
     %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
     %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}   
+     
   / Wrapper for slides
   .carousel-inner
     .item.active
       =image_tag("google.jpg")
     .item
       =image_tag("unnamed.jpg")
+    
            
   / Controls
   %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
     %span.glyphicon.glyphicon-chevron-left
   %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
     %span.glyphicon.glyphicon-chevron-right
+
 

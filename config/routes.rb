@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'welcome/index'
-   get 'welcome/about'
+   get '/about-us'=> 'welcome#about'
 
  
 
   resources :contacts,only: [:new,:create]
   resources :carriers,only: [:new,:create]
-  resources :portfolios,only: [:new,:create]
+  resources :portfolios
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

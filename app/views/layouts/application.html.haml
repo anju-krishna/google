@@ -54,19 +54,16 @@
                     %li.divider{:role => "presentation"}
                     
               - else
-                %li= link_to "About us", welcome_about_path
+                %li= link_to "About us",  about_us_path
                 %li= link_to "Career", new_carrier_path
                 %li= link_to "Contact us", new_contact_path
                 
-                %li= link_to "Portfolio" , new_portfolio_path
+                %li= link_to "Portfolio" , portfolios_path
                 %li= link_to "Sign in" , new_user_session_path
-                
-    .container-fluid
-      .row-fluid
-        .span3
+     
 
       
-        .span9
+        
           = bootstrap_flash
           = yield
       / /row
@@ -74,3 +71,4 @@
         %center
           %p google.com
     / /container
+
