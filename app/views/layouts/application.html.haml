@@ -27,7 +27,7 @@
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
   %body
-    .navbar.navbar-fluid-top
+    .navbar.navbar-fluid-top.navbar-inverse
       .navbar-inner
         .container-fluid
           %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
@@ -39,36 +39,41 @@
           .container-fluid.nav-collapse
             %ul.nav
               - if user_signed_in?
-               
+                
+                
+
                 .dropdown
                   %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
 
-                    =current_user.email
+                    Settings
                     %span.caret
                   %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
                     %li{:role => "presentation"}
 
-                     
+                      =link_to "Edit User", edit_user_registration_path
                       =link_to "Sign out", destroy_user_session_path
                     
                     %li.divider{:role => "presentation"}
-                    
+               
               - else
-                %li= link_to "About us",  about_us_path
+                %li= link_to "About us", about_us_path
                 %li= link_to "Career", new_carrier_path
                 %li= link_to "Contact us", new_contact_path
                 
                 %li= link_to "Portfolio" , portfolios_path
                 %li= link_to "Sign in" , new_user_session_path
-     
+                
+    .container-fluid
+      .row-fluid
+       
 
       
-        
+        .span9
           = bootstrap_flash
           = yield
       / /row
       %footer
         %center
-          %p google.com
+          %p google.2014
     / /container
 

@@ -1,0 +1,24 @@
+= form_for @slider do |f|
+  - if @slider.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@slider.errors.count, "error")} prohibited this slider from being saved:"
+      %ul
+        - @slider.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :slide
+    = f.text_field :slide
+  .field
+    = f.label :images
+    = f.file_field :images
+    = f.hidden_field :user,value: current_user
+    %br
+    = f.submit:"Upload Image",class:"btn btn-success"
+      

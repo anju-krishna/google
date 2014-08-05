@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sliders
+
   get 'home/index'
 
   devise_for :users
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   resources :contacts,only: [:new,:create]
   resources :carriers,only: [:new,:create]
   resources :portfolios
+   resources :sliders
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

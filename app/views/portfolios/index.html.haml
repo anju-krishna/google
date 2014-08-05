@@ -10,12 +10,12 @@
     %tr
       %td= portfolio.name
       %td= portfolio.description
-      %td= portfolio.image
+      %td= image_tag portfolio.image
       %td= link_to 'Show', portfolio_path(portfolio)
       %td= link_to 'Edit', edit_portfolio_path(portfolio)
       %td= link_to 'Destroy', portfolio_path(portfolio),         |
           method: :delete, data: { confirm: 'Are you sure?' } |
-= link_to 'New Details', new_portfolio_path
+= link_to 'New Portfolio', new_portfolio_path
 %br
 %br
 .row-fluid
